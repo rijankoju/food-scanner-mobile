@@ -1,22 +1,39 @@
 {
-  "name": "mobile",
+  "name": "food-scanner-mobile",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "expo-router/entry",
   "dependencies": {
+    "@expo/vector-icons": "^15.0.2",
+    "@tanstack/react-query": "^5.104.4",
     "expo": "~58.0.14",
+    "expo-camera": "~58.0.10",
+    "expo-constants": "~58.0.12",
+    "expo-file-system": "~58.0.9",
+    "expo-image-manipulator": "~58.0.14",
+    "expo-image-picker": "~58.0.10",
+    "expo-linking": "~58.0.13",
+    "expo-router": "~58.0.23",
+    "expo-secure-store": "~58.0.2",
     "expo-status-bar": "~58.0.3",
     "react": "19.3.0",
-    "react-native": "0.88.0"
+    "react-native": "0.88.0",
+    "react-native-safe-area-context": "~5.10.1",
+    "react-native-screens": "~4.30.0",
+    "react-native-svg": "15.16.0"
   },
   "devDependencies": {
     "@types/react": "~19.3.0",
+    "eslint": "^9.0.0",
+    "eslint-config-expo": "~58.0.4",
     "typescript": "~6.0.3"
   },
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "start": "expo start --port 8082",
+    "android": "expo start --port 8082 --android",
+    "ios": "expo start --port 8082 --ios",
+    "web": "expo start --port 8082 --web",
+    "typecheck": "tsc --noEmit",
+    "lint": "expo lint"
   },
   "private": true
 }
